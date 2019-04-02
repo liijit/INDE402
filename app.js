@@ -22,7 +22,7 @@ MongoClient.connect(url, { useNewUrlParser: true }, (error, client) => {
 })
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname"/www/index.html");
+    res.sendFile(__dirname + "/www/index.html");
 });
 
 app.post("/addData", (req, res) => {
