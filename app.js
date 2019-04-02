@@ -6,7 +6,7 @@ const ObjectId = require("mongodb").ObjectID;
 
 const dbName = "thermo-db";
 //const url = `mongodb://localhost:27017`;
-const url = "mongodb+srv://admin:abcde12345@db-fdekn.mongodb.net/test?retryWrites=true";
+const url = "mongodb+srv://admin:12345abcde@db-fdekn.mongodb.net/test?retryWrites=true";
 
 var app = Express();
 var port = process.env.PORT || 3000;
