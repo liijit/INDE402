@@ -16,7 +16,7 @@ app.use(BodyParser.urlencoded({ extended: true }));
 
 MongoClient.connect(url, { useNewUrlParser: true }, (error, client) => {
     if (error) throw error;
-    database = client.db(thermo-db);
+    database = client.db("thermo-db");
     collection = database.collection("thermocollation");
     console.log(`Connected to ${dbName}`);
 })
