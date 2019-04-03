@@ -38,7 +38,8 @@ app.post("/fetchData", (req, res) => {
 
 app.get("/lol", (req, res) => {
     res.status(200);
-    database.collection("thermocollation").find().toArray((err, result) => {
+    database.collection("thermocollation").find().toArray((e
+        rr, result) => {
         if (err) throw err;
         res.send(result);
     })
