@@ -21,11 +21,13 @@ MongoClient.connect(url, { useNewUrlParser: true }, (error, client) => {
     console.log(`Connected to ${dbName}`);
 })
 
-
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/www/");
+});
 
 app.use(express.static(__dirname + '/www'))
-
-app.post("/addData", (req, res) => {
+    
+app.post("/fetchData", (req, res) => {
     res.status(200);
     database.collection("thermocollation").insertOne(req.body, (err, result) => {
         if (err) throw err;
@@ -34,7 +36,7 @@ app.post("/addData", (req, res) => {
     })
 })
 
-app.get("/getData", (req, res) => {
+app.get("/lol", (req, res) => {
     res.status(200);
     database.collection("thermocollation").find().toArray((err, result) => {
         if (err) throw err;
